@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <title>Página Inicial</title>
+    <script src="public/js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-afim">
+        <div class="title">
+          <h2>Gerador de Função Afim.</h2>
+        </div>
+        <hr />
+        <!-- <br />
+        <p>f(2) = a · 2 + b.</p>
+        <p>f(6) = a · 6 + b.</p>
+        <p>f(12) = a · 12 + b.</p> -->
+
+        <div class="question">
+          <div class="question-title">
+            <h2>
+              Função: <span id="function-afim"> &nbsp; f(x) = a · x + b.</span>
+            </h2>
+            <br />
+            <h3 id="variable-x-title">Valor da variável (<span>x</span>):</h3>
+            <br />
+            <p id="variable-x">Fórmula Afim:</p>
+            <br />
+            <form>
+              <br />
+              <div class="inputs">
+                <!-- <label for="variable-a">Informe o valor da variável A:</label> -->
+                <input
+                  type="number"
+                  name="variable-a"
+                  id="variable-a"
+                  class="inputQuestion"
+                  placeholder="Variável de A:"
+                  required
+                />
+                <br />
+                <!-- <label for="variable-b">Informe o valor da variável B:</label> -->
+                <input
+                  type="number"
+                  name="variable-b"
+                  id="variable-b"
+                  class="inputQuestion"
+                  placeholder="Variável de B:"
+                  required
+                />
+                <br />
+                <div class="area-button"><button id="button-generate">Gerar função</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="result-afim">
+        <div class="title-result">
+          <h2>Resultado:</h2>
+        </div>
+        <hr />
+        <div class="result-text">
+          <div class="title">
+            <div class="section-result">
+              <h2>Função Gerada:</h2>
+              <p id="function-afim"></p>
+            </div>
+            <br />
+            <div class="section-result">
+              <h2>Resultado: &nbsp;</h2>
+              <p id="result"></p>
+            </div>
+            <br />
+            <div class="section-result" id="zero-section">
+              <h2>Zero da Função:&nbsp;&nbsp;</h2>
+              <p id="zero-result"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
