@@ -69,7 +69,9 @@ div.container {
     background-size: 300% 300%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 16px;
-    width: 430px;
+    cursor: pointer;
+    width: auto;
+    margin: 4px;
     padding: 40px;
     display: flex;
     align-items: center;
@@ -85,8 +87,10 @@ div.container {
 
     & div.title {
       margin-top: 10px;
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: start;
       gap: 20px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.594);
     }
@@ -172,6 +176,7 @@ div.container {
     background-size: 300% 300%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 16px;
+    cursor: pointer;
     width: 430px;
     padding: 30px;
     display: flex;
@@ -180,7 +185,7 @@ div.container {
     flex-direction: column;
     gap: 20px;
     animation: gradient 10s ease infinite, float 1.5s ease-in-out infinite;
-    animation-delay: .2s;
+    animation-delay: 0.2s;
 
     &:hover {
       animation: gradient 10s ease infinite;
@@ -234,6 +239,79 @@ div.container {
       }
     }
   }
+
+  & div.graphic-afim {
+    background-image: linear-gradient(to top, #1e3a8a, #38b2ac, #1e3a8a);
+    background-size: 300% 300%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    cursor: pointer;
+    width: 430px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    animation: gradient 10s ease infinite, float 1.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+
+    & div.title {
+      width: 100%;
+      text-align: start;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.594);
+    }
+
+    & hr {
+      width: 100%;
+      border: 2px solid #fff;
+    }
+
+    &:hover {
+      animation: gradient 10s ease infinite;
+    }
+
+    & div.graphic {
+      background: aliceblue;
+      box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      color: #000;
+      font-weight: bold;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding: 20px;
+      gap: 8px;
+
+      & button {
+        background-color: #4a5568;
+        border: 1px solid black;
+        border-radius: 12px;
+        color: #fff;
+        height: auto;
+        width: auto;
+        cursor: pointer;
+        padding: 12px;
+        transition: all 0.6s ease;
+
+        &:hover {
+          background-color: #1a2020;
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}
+
+button#button-box:hover {
+  transform: scale(0.96);
+}
+
+section#section-main-box {
+  background-image: url("../images/fundo-graphic.png");
+  background-size: cover;
 }
 
 @media screen and (max-width: 767px) {
@@ -250,6 +328,7 @@ div.container {
     justify-content: start;
     align-items: start;
     padding: 70px;
+    flex-wrap: nowrap !important;
   }
   div.box-afim {
     height: auto !important;
@@ -261,7 +340,39 @@ div.container {
       width: 100% !important;
       align-items: center !important;
       border-radius: 12px !important;
-      padding: 40px !important;
+      padding: 25px !important;
+    }
+  }
+
+  div.graphic {
+    background: aliceblue;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px !important;
+    gap: 8px;
+
+    & button {
+      background-color: #4a5568;
+      border: 1px solid black;
+      border-radius: 12px;
+      color: #fff;
+      height: 40px;
+      width: auto;
+      cursor: pointer;
+      padding: 6px;
+      transition: all 0.6s ease;
+
+      &:hover {
+        background-color: #1a2020;
+        transform: translateY(-6px) scale(0.98);
+      }
     }
   }
 }

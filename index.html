@@ -17,13 +17,13 @@
     />
     <link rel="stylesheet" href="public/css/style.css" />
     <title>Gerador de Funções Afim</title>
-    <script src="public/js/index.js" defer></script>
+    <script src="public/js/index.js" type="module" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="box-afim">
         <div class="title">
-          <h2>Gerador de Funções Afim.</h2>
+          <h2>Função Afim.</h2>
         </div>
         <hr />
         <!-- <br />
@@ -34,7 +34,7 @@
         <div class="question">
           <div class="question-title">
             <h2>
-              Função: <span id="function-afim"> &nbsp; f(x) = a · x + b.</span>
+              Função:<span id="function-afim">&nbsp; f(x) = a · x + b.</span>
             </h2>
             <br />
             <h3 id="variable-x-title">Valor da variável (<span>x</span>):</h3>
@@ -64,7 +64,9 @@
                   required
                 />
                 <br />
-                <div class="area-button"><button id="button-generate">Gerar função</button></div>
+                <div class="area-button">
+                  <button id="button-generate">Gerar função</button>
+                </div>
               </div>
             </form>
           </div>
@@ -72,7 +74,7 @@
       </div>
       <div class="result-afim">
         <div class="title-result">
-          <h2>Resultado:</h2>
+          <h2>Resultado da Função:</h2>
         </div>
         <hr />
         <div class="result-text">
@@ -89,9 +91,25 @@
             <br />
             <div class="section-result" id="zero-section">
               <h2>Zero da Função:&nbsp;&nbsp;</h2>
+              <h3>Fórmula: <span>x = -b/a</span>.</h3>
+              <h3><span id="zero-formula"></span></h3>
+              <br />
+              <h2>Valor do Zero da Função:</h2>
               <p id="zero-result"></p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="graphic-afim">
+        <div class="title">
+          <h2>Gráfico da Função:</h2>
+        </div>
+        <hr />
+        <div class="graphic">
+          <div class="title-graphic">
+            <h2>Gráfico Gerado:</h2>
+          </div>
+          <button id="button-graphic">Visualizar Gráfico</button>
         </div>
       </div>
     </div>

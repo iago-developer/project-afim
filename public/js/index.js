@@ -1,7 +1,10 @@
+import Window from "./window.js";
+
 const container = document.querySelector("div.container");
 const boxAfim = document.querySelector("div.box-afim");
 const buttonGenerate = document.querySelector("#button-generate");
 const resultAfim = document.querySelector("div.result-afim");
+const buttonGraphic = document.querySelector("button#button-graphic");
 
 function random() {
   const title = document.querySelector("h3#variable-x-title");
@@ -25,6 +28,10 @@ buttonGenerate.addEventListener("click", function (event) {
   let variableX = Number(numberParagraph);
   let zero = Number(-variableB.value / variableA.value);
   let zeroDiv = document.querySelector("p#zero-result");
+  let zeroFormula = document.querySelector("span#zero-formula");
+
+  let formulaZero = `x = -${variableB.value} / ${variableA.value}`;
+
   if(variableA.value == "" || variableB.value == "") throw window.alert("Erro, insira os valores de A e B!");
   
   functionAfim.innerHTML = `&nbsp; <span>f(${variableX}) = ${variableA.value} · ${variableX} + ${variableB.value}.</span> `;
@@ -33,6 +40,9 @@ buttonGenerate.addEventListener("click", function (event) {
   const output = document.querySelector("#result");
   output.innerHTML = `<span>f(${variableX}) = ${result}.</span>`;
   zeroDiv.innerHTML = Number(zero);
+  zeroFormula.innerHTML = formulaZero;
 });
 
-
+buttonGraphic.addEventListener("click", () => {
+  Window.exibir();
+});
