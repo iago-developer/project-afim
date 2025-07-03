@@ -369,6 +369,11 @@ section#section-main-box {
       padding: 6px;
       transition: all 0.6s ease;
 
+      &:disabled {
+        background-color: #868282 !important;
+        border: none !important;
+      }
+
       &:hover {
         background-color: #1a2020;
         transform: translateY(-6px) scale(0.98);

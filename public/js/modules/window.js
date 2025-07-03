@@ -8,9 +8,11 @@ class Window {
   static gradient = "linear-gradient(to top, #1e3a8a, #38b2ac, #1e3a8a)";
   static destino = document.body;
 
-  static configLine(a, b) {
+  static configLine(a, b, fS01, fS02) {
     this.a = a;
     this.b = b;
+    this.fS01 = fS01;
+    this.fS02 = fS02;
   }
 
   static exibir() {
@@ -84,8 +86,119 @@ class Window {
      width: 100%;
      color: #000;
      padding: 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
     `;
     box.appendChild(main);
+
+    const dataSection = document.createElement("div");
+    dataSection.setAttribute("id", "section-data");
+    dataSection.style.cssText = `
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 2px 2px 4px rgba(0,0,0, 0.6);
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px; 
+    `;
+    main.appendChild(dataSection);
+
+    const titleData = document.createElement("h2");
+    titleData.setAttribute("id", "title-data");
+    titleData.style.cssText = `
+      width: 100%;
+      text-align: start;
+      border-bottom: 3px solid #000;
+    `;
+    titleData.innerHTML = "Dados do Gráfico:";
+    dataSection.appendChild(titleData);
+
+    const dataDiv01 = document.createElement("div");
+    dataDiv01.setAttribute("id", "data-div");
+    dataDiv01.style.cssText = `
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    `;
+    dataSection.appendChild(dataDiv01);
+    
+    const spanA = document.createElement("span");
+    spanA.setAttribute("id", "span");
+    spanA.style.cssText = `
+    background-color: #dfdfdf;
+    border: 3px solid #1a2020;
+    border-radius: 6px;
+    color: #000;
+    margin: 5px;
+    font-weight: bold;
+    padding: 12px;
+    `;
+    spanA.innerHTML = `Coeficiente Angular (a): ${this.a}`;
+    dataDiv01.appendChild(spanA);
+    
+    const spanB = document.createElement("span");
+    spanB.setAttribute("id", "span");
+    spanB.style.cssText = `
+      background-color: #dfdfdf;
+      border: 3px solid #1a2020;
+      border-radius: 6px;
+      color: #000;
+      margin: 5px;
+      font-weight: bold;
+      padding: 12px;
+    `;
+    spanB.innerHTML = `Coeficiente Linear (b): ${this.b}`;
+    dataDiv01.appendChild(spanB);
+
+    const dataDiv02 = document.createElement("div");
+    dataDiv02.setAttribute("id", "data-div");
+    dataDiv02.style.cssText = `
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    `;
+    dataSection.appendChild(dataDiv02);
+
+    const funcao = document.createElement("span");
+    funcao.setAttribute("id", "funcao-graphic");
+    funcao.style.cssText = `
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    `;
+    dataDiv02.appendChild(funcao);
+
+    const spanFuncao01 = document.createElement("span");
+    spanFuncao01.setAttribute("id", "funcao-span");
+    spanFuncao01.style.cssText = `
+      background-color: #dfdfdf;
+      border: 3px solid #1a2020;
+      border-radius: 6px;
+      color: #000;
+      margin: 5px;
+      font-weight: bold;
+      padding: 12px;
+    `;
+    spanFuncao01.innerHTML = `Função: f(x) = ${this.a} · x + ${this.b}`;
+    funcao.appendChild(spanFuncao01);
+
+    const spanFuncao02 = document.createElement("span");
+    spanFuncao02.setAttribute("id", "funcao-span");
+    spanFuncao02.style.cssText = `
+      background-color: #dfdfdf;
+      border: 3px solid #1a2020;
+      border-radius: 6px;
+      color: #000;
+      margin: 5px;
+      font-weight: bold;
+      padding: 12px;
+    `;
+    spanFuncao02.innerHTML = `Esta função é considerada: ${this.fS01} e também ${this.fS02}.`;
+    funcao.appendChild(spanFuncao02);
 
     const lineX = document.createElement("div");
     lineX.setAttribute("id", "line-x");
@@ -129,7 +242,7 @@ class Window {
       border-radius: 9px;
       box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
       height: 300px;
-      width: 600px;
+      width: 100%;
       display: flex;
       justify-content: center;
       position: relative;
