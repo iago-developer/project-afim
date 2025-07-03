@@ -2,9 +2,16 @@
 
 class Window {
   static header_content = "Gráfico Gerado:";
+  static a = null;
+  static b = null;
   static main_content = null;
   static gradient = "linear-gradient(to top, #1e3a8a, #38b2ac, #1e3a8a)";
   static destino = document.body;
+
+  static configLine(a, b) {
+    this.a = a;
+    this.b = b;
+  }
 
   static exibir() {
     const area = document.createElement("div");
@@ -19,6 +26,7 @@ class Window {
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
   `;
     this.destino.prepend(area);
 
@@ -72,11 +80,11 @@ class Window {
     const main = document.createElement("main");
     main.setAttribute("id", "main-box");
     main.style.cssText = `
-    height: 100%;
-    width: 100%;
-      color: #000;
-      padding: 30px;
-      `;
+     height: 100%;
+     width: 100%;
+     color: #000;
+     padding: 30px;
+    `;
     box.appendChild(main);
 
     const lineX = document.createElement("div");
@@ -87,8 +95,8 @@ class Window {
       width: 100%;
       text-align: end;
       position: absolute;
-      top: 50%;
-      `;
+      top: 52%;
+    `;
 
     const titleX = document.createElement("h3");
     titleX.style.cssText = `
@@ -105,11 +113,12 @@ class Window {
       width: 2.4px;
       position: absolute;
       top: 0%;
-    `;
+      `;
 
     const titleY = document.createElement("h3");
     titleY.style.cssText = `
-    padding: 10px;
+      padding: 10px;
+      position: relative;
     `;
     titleY.innerHTML = "Y";
     lineY.prepend(titleY);
@@ -124,11 +133,39 @@ class Window {
       display: flex;
       justify-content: center;
       position: relative;
+      overflow: hidden;
     `;
 
     main.prepend(section);
     section.appendChild(lineX);
     section.appendChild(lineY);
+
+    const pointer = document.createElement("div");
+    pointer.setAttribute("id", "pointer");
+    pointer.style.cssText = `
+      background-color: red;
+      border-radius: 50%;
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      top: ${this.b}%;
+      left: 50%;
+      transform: translateX(-50%) rotate(${this.a}deg);
+    `;
+    lineY.prepend(pointer);
+
+    const line = document.createElement("div");
+    line.setAttribute("id", "line");
+    line.style.cssText = `
+      background-color: red;
+      height: 10000px;
+      width: 3px;
+      position: relative;
+      top: 50%;
+      left: 50%;  
+      transform: translate(-50%, -50%);
+    `;
+    pointer.prepend(line);
 
     const buttonBox = document.createElement("button");
     buttonBox.setAttribute("id", "button-box");
