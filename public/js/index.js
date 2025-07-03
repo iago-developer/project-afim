@@ -1,4 +1,4 @@
-import Window from "./window.js";
+import Window from "./modules/window.js";
 
 const container = document.querySelector("div.container");
 const boxAfim = document.querySelector("div.box-afim");
