@@ -160,6 +160,7 @@ class Window {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
     `;
     dataSection.appendChild(dataDiv02);
 
