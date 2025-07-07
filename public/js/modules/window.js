@@ -37,12 +37,11 @@ class Window {
     box.style.cssText = `
       background-image: ${this.gradient};
       background-size: 300% 300%;
-      border-radius: 12px;
       box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
       color: #000;
-      height: 100%d;
+      height: 100%;
       width: auto;
-      margin: 15px;
+      padding: 15px;
       overflow: hidden;
       animation: gradient 10s ease infinite;
   `;
