@@ -40,6 +40,7 @@ class Window {
       border-radius: 12px;
       box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
       color: #000;
+      height: 100%d;
       width: auto;
       margin: 15px;
       overflow: hidden;
