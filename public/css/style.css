@@ -70,7 +70,7 @@ div.container {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 16px;
     cursor: pointer;
-    width: auto;
+    width: 100%;
     margin: 4px;
     padding: 40px;
     display: flex;
@@ -102,7 +102,7 @@ div.container {
       color: #000;
       font-weight: bold;
       height: auto;
-      width: 380px;
+      width: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -208,7 +208,7 @@ div.container {
       border-radius: 10px;
       color: #000;
       font-weight: bold;
-      width: 100%;
+      width: auto;
       display: flex;
       align-items: start;
       justify-content: center;
@@ -281,9 +281,9 @@ div.container {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: row;
+      flex-direction: column;
       padding: 20px;
-      gap: 8px;
+      gap: 20px;
 
       & button {
         background-color: #4a5568;
@@ -315,8 +315,16 @@ section#section-main-box {
 }
 
 @media screen and (max-width: 767px) {
+  * {
+    animation: none !important;
+  }
+
   body {
     height: 100%;
+  }
+
+  div.question {
+    width: 340px !important;
   }
 }
 
@@ -337,10 +345,19 @@ section#section-main-box {
 
     & div.question {
       height: auto !important;
-      width: 100% !important;
+      width: 350px !important;
       align-items: center !important;
       border-radius: 12px !important;
       padding: 25px !important;
+    }
+  }
+
+  div.result-afim {
+    height: auto !important;
+    width: auto !important;
+
+    & div.result-text {
+      width: 350px !important;
     }
   }
 
@@ -350,6 +367,7 @@ section#section-main-box {
     border-radius: 10px;
     color: #000;
     font-weight: bold;
+    height: auto !important;
     width: 100%;
     display: flex;
     align-items: center;

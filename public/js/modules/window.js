@@ -40,8 +40,8 @@ class Window {
       border-radius: 12px;
       box-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
       color: #000;
-      height: auto;
       width: auto;
+      margin: 15px;
       overflow: hidden;
       animation: gradient 10s ease infinite;
   `;
@@ -85,7 +85,7 @@ class Window {
      height: 100%;
      width: 100%;
      color: #000;
-     padding: 30px;
+     padding: 20px;
      display: flex;
      flex-direction: column;
      gap: 30px;
@@ -123,9 +123,10 @@ class Window {
       width: 100%;
       display: flex;
       justify-content: center;
+      flex-direction: column;
     `;
     dataSection.appendChild(dataDiv01);
-    
+
     const spanA = document.createElement("span");
     spanA.setAttribute("id", "span");
     spanA.style.cssText = `
@@ -139,7 +140,7 @@ class Window {
     `;
     spanA.innerHTML = `Coeficiente Angular (a): ${this.a}`;
     dataDiv01.appendChild(spanA);
-    
+
     const spanB = document.createElement("span");
     spanB.setAttribute("id", "span");
     spanB.style.cssText = `
@@ -159,7 +160,7 @@ class Window {
     dataDiv02.style.cssText = `
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-direction: column;
     `;
     dataSection.appendChild(dataDiv02);
@@ -170,6 +171,7 @@ class Window {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
     `;
     dataDiv02.appendChild(funcao);
 
