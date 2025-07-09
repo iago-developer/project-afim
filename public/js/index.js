@@ -9,7 +9,7 @@ const buttonGraphic = document.querySelector("button#button-graphic");
 function random() {
   const title = document.querySelector("h3#variable-x-title");
   const paragraph = document.querySelector("p#variable-x");
-  var randomText = Math.floor(-Math.random() * 50 + 1);
+  var randomText = Math.floor(Math.random() * 50 + 1);
 
   title.innerHTML += `&nbsp; <span>${randomText}</span>`;
   paragraph.innerHTML += `&nbsp; <span>f(${randomText}) = a · ${randomText} + b.</span>`;
