@@ -222,6 +222,7 @@ class Window {
     const titleX = document.createElement("h3");
     titleX.style.cssText = `
       padding: 10px;
+      z-index: 1;
       `;
     titleX.innerHTML = "X";
     lineX.prepend(titleX);
@@ -234,6 +235,7 @@ class Window {
       width: 2.4px;
       position: absolute;
       top: 0%;
+      z-index: 1;
       `;
 
     const titleY = document.createElement("h3");
