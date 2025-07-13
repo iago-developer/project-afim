@@ -16,9 +16,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="public/css/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="public/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="public/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="public/icons/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/icons/favicon-16x16.png"
+    />
     <link rel="manifest" href="public/icons/site.webmanifest" />
     <title>Gerador de Funções Afim</title>
     <script src="public/js/index.js" type="module" defer></script>
@@ -38,13 +52,15 @@
         <div class="question">
           <div class="question-title">
             <h2>
-              Função:<span id="function-afim">&nbsp; f(x) = a · x + b.</span>
+              Função: <span id="space-desktop">&nbsp;</span>
+              <br id="break-mobile" />
+              <span id="function-afim">f(x) = a · x + b.</span>
             </h2>
             <br />
             <h3 id="variable-x-title">Valor da variável (<span>x</span>):</h3>
+            <button id="alternate-x">Alterar valor da variável (x)</button>
             <br />
             <p id="variable-x">Fórmula Afim:</p>
-            <br />
             <form>
               <br />
               <div class="inputs">

@@ -48,6 +48,14 @@ body {
   overflow-x: hidden;
 }
 
+br#break-mobile {
+  display: none;
+}
+
+span#space-desktop {
+  display: inline;
+}
+
 span {
   font-family: "Matematica", serif;
 }
@@ -157,11 +165,23 @@ div.container {
           transform: translateY(-6px) scale(0.98);
         }
       }
+
+      & button#alternate-x {
+        margin-bottom: 10px;
+      }
+
+      & p#variable-x {
+        margin-top: 10px;
+      }
     }
 
     & div.title {
       width: 100%;
       text-align: start;
+    }
+
+    & span#function-afim {
+      margin-top: 30px;
     }
 
     & hr {
@@ -326,6 +346,23 @@ section#section-main-box {
 
   div.question {
     width: 100% !important;
+    cursor: none !important;
+  }
+
+  div.result-afim {
+    cursor: none !important;
+  }
+
+  div.graphic-afim {
+    cursor: none !important;
+  }
+
+  br#break-mobile {
+    display: block;
+  }
+
+  span#space-desktop {
+    display: none;
   }
 }
 

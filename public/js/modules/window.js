@@ -4,13 +4,18 @@ class Window {
   static header_content = "Gráfico Gerado:";
   static a = null;
   static b = null;
+  static x = null;
+  static fS01 = null;
+  static fS02 = null;
+  static x = null;
   static main_content = null;
   static gradient = "linear-gradient(to top, #1e3a8a, #38b2ac, #1e3a8a)";
   static destino = document.body;
 
-  static configLine(a, b, fS01, fS02) {
+  static configLine(a, b, x, fS01, fS02) {
     this.a = a;
     this.b = b;
+    this.x = x;
     this.fS01 = fS01;
     this.fS02 = fS02;
   }
@@ -186,7 +191,7 @@ class Window {
       font-weight: bold;
       padding: 12px;
     `;
-    spanFuncao01.innerHTML = `Função: f(x) = ${this.a} · x + ${this.b}`;
+    spanFuncao01.innerHTML = `Função: f(${this.x}) = ${this.a} · ${this.x} + ${this.b}`;
     funcao.appendChild(spanFuncao01);
 
     const spanFuncao02 = document.createElement("span");
