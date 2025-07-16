@@ -1,5 +1,3 @@
-// import FundoGraphic from "../images/fundo-graphic.png";
-
 class Window {
   static header_content = "Gráfico Gerado:";
   static a = null;
