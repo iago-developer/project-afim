@@ -346,15 +346,15 @@ section#section-main-box {
 
   div.question {
     width: 100% !important;
-    cursor: none !important;
+    cursor: auto !important;
   }
 
   div.result-afim {
-    cursor: none !important;
+    cursor: auto !important;
   }
 
   div.graphic-afim {
-    cursor: none !important;
+    cursor: auto !important;
   }
 
   br#break-mobile {

@@ -31,7 +31,7 @@ class Window {
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
+      cursor: auto;
   `;
     this.destino.prepend(area);
 
